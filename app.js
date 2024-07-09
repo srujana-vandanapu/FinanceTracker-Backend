@@ -13,13 +13,11 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(cors());
 
+
 app.use("/income", incomeRoutes);
 app.use("/expenditure", expenditureRoutes);
 app.use("/user", userRoutes);
 
-app.get("/", (req, res) => {
-  res.send("hello");
-});
 
 app.listen(PORT, () => {
   db();

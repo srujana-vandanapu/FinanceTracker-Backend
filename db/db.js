@@ -4,7 +4,7 @@ const db = async () => {
   try {
     mongoose.set("strictQuery", false);
     await mongoose.connect(
-      "mongodb+srv://vandanapusrujana:78f64zAK8HVtlcdf@finance-tracker.bz8abkw.mongodb.net/?retryWrites=true&w=majority&appName=Finance-Tracker"
+      "mongodb://localhost:27017/financeTracker"
     );
     console.log("db connected");
   } catch (error) {
